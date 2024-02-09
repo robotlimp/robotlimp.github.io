@@ -66,8 +66,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
   </section>
 
   <section class="hero teaser">
@@ -75,7 +73,7 @@
       <div class="hero-body">
         <img id="teaser" src="./static/images/limp_splash.jpeg" alt="Limp teaser image." class="teaser-image" />
         <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/trimmed.mov"
+        <source src="./static/videos/full.mov"
                 type="video/mp4">
       </video> -->
 
@@ -96,15 +94,15 @@
                 <source src="./static/videos/place.mov" type="video/mp4">
               </video>
             </div>
-            <div></div>
+            <div class="item item-steve">
+              <video poster="" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/full.mov" type="video/mp4">
+              </video>
+            </div>
           </div>
         </div>
 
         <h2 class="subtitle has-text-justified" style="font-size: 14px; padding-top: 1%;">
-          <!-- <br> -->
-          <!-- <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits. -->
 
           <!-- Language Instruction grounding for Motion Planning (LIMP) executing the instruction.  -->
           Language Instruction grounding for Motion Planning (LIMP) executing the instruction "<span
@@ -119,88 +117,111 @@
   </section>
 
 
-  <!-- <section class="hero is-light is-small">
-  <div class="hero-body">
-
-  </div>
-</section> -->
 
 
-  <!-- <section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Main Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
+  <div class="container">
+
+
+    <div class="container is-max-desktop">
+
+      <div class="column has-text-centered">
+        <p class="title is-3">Real-World Demonstration<br><span class="title is-5">(All videos are 1x speed)</span></p>
+        <p class="subtitle has-text-justified" style="font-size: 14px; padding-top:1%">
+          Below are some realworld examples of LIMP generating task and motion plans to solve object goal navigation and mobile manipulation instructions with complex spatiotemporal constraints.
+        </p>
       </div>
     </div>
-  </div>
-</section> -->
 
-
-  <section class="hero is-light is-small">
-    <div class="container">
-      <br>
-      <div class="container is-max-desktop">
-        <h2 class="title is-3">Qualitative Examples</h2>
-        <div class="content has-text-justified">
-          <p>
-            Below are some examples of using LIMP, to generate correct-by-construction task and motion plans to solve
-            object goal navigation and mobile manipulation instructions with complex spatiotemporal constraints.
-          </p>
-        </div>
+    <!-- #### Carousel result presentation-->
+    <!-- <div id="results-carousel" class="carousel results-carousel">
+      <div class="item item-1">
+        <video poster="" controls muted loop playsinline height="100%">
+          <source src="./static/videos/nav.mov" type="video/mp4">
+        </video>
       </div>
-      <br>
+      <div class="item item-steve">
+        <video poster="" autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/pick.mov" type="video/mp4">
+        </video>
+      </div>
+      <div class="item item-2">
+        <video poster="" autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/place.mov" type="video/mp4">
+        </video>
+      </div>
+      <div class="item item-3">
+      </div>
+    </div>
+    <div id="results-carousel" class="carousel results-carousel">
+      <div class="item item-1">
+        <video poster="" controls muted loop playsinline height="100%">
+          <source src="./static/videos/nav.mov" type="video/mp4">
+        </video>
+      </div>
+      <div class="item item-2">
+        <video poster="" controls muted loop playsinline height="100%">
+          <source src="./static/videos/pick.mov" type="video/mp4">
+        </video>
+      </div>
+      <div class="item item-3">
+        <video poster="" controls muted loop playsinline height="100%">
+          <source src="./static/videos/place.mov" type="video/mp4">
+        </video>
+      </div>
+      <div class="item item-steve">
+      </div>
+    </div> -->
+  
       <div class="columns is-centered">
-        <!-- Visual Effects. -->
-        <div class="column">
+        <div class="column has-text-centered">
           <div class="content">
-            <h3 class="title is-5">Object Goal Navigation</h3>
-            <!-- <p>
-          Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-          would be impossible without nerfies since it would require going through a wall.
-        </p> -->
-            <img src="./static/images/qual_1.jpg" alt="Dolly zoom effect." class="dollyzoom">
+            <h3 class="title is-5">Demo 1</h3>
+
+            <video id="replay-video" controls muted preload loop playsinline width="100%">
+              <source src="./static/videos/demo1_info.mov" type="video/mp4">
+            </video>
           </div>
           <div class="content has-text-centered">
-            <video id="replay-video" controls muted preload playsinline width="100%">
-              <source src="./static/videos/pick.mov" type="video/mp4">
+            <video id="replay-video" controls muted preload loop playsinline width="100%">
+              <source src="./static/videos/demo1.mp4" type="video/mp4">
             </video>
           </div>
         </div>
 
-        <div class="column">
-          <h3 class="title is-5">Mobile Manipulation</h3>
-          <div class="columns is-centered">
-            <div class="column content">
-              <!-- <p>
-            As a byproduct of our method, we can also solve the matting problem by ignoring
-            samples that fall outside of a bounding box during rendering.
-          </p> -->
-              <img src="./static/images/qual_1.jpg" alt="Dolly zoom effect." class="dollyzoom">
-            </div>
+        <div class="column has-text-centered">
+          <div class="content">
+            <h3 class="title is-5">Demo 1</h3>
+
+            <video id="replay-video" controls muted preload loop playsinline width="100%">
+              <source src="./static/videos/demo1_info.mov" type="video/mp4">
+            </video>
           </div>
           <div class="content has-text-centered">
-            <video id="replay-video" controls muted preload playsinline width="100%">
-              <source src="./static/videos/pick.mov" type="video/mp4">
+            <video id="replay-video" controls muted preload loop playsinline width="100%">
+              <source src="./static/videos/demo1.mp4" type="video/mp4">
             </video>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
+        <div class="column has-text-centered">
+          <div class="content">
+            <h3 class="title is-5">Demo 1</h3>
 
+            <video id="replay-video" controls muted preload loop playsinline width="100%">
+              <source src="./static/videos/demo1_info.mov" type="video/mp4">
+            </video>
+          </div>
+          <div class="content has-text-centered">
+            <video id="replay-video" controls muted preload loop playsinline width="100%">
+              <source src="./static/videos/demo1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+  
 
-
-
-
-
-
-
+  </div>
+  <br>
+  <br>
 </body>
 
 </html>
