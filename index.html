@@ -40,7 +40,6 @@
 </head>
 
 <body>
-
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -50,7 +49,6 @@
       </a>
     </div>
   </nav>
-
 
   <section class="hero">
     <div class="hero-body">
@@ -81,22 +79,22 @@
           <div id="results-carousel" class="carousel results-carousel">
             <div class="item item-steve">
               <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/nav.mov" type="video/mp4">
+                <source src="./static/videos/nav.mp4" type="video/mp4">
               </video>
             </div>
             <div class="item item-steve">
               <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/pick.mov" type="video/mp4">
+                <source src="./static/videos/pick.mp4" type="video/mp4">
               </video>
             </div>
             <div class="item item-steve">
               <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/place.mov" type="video/mp4">
+                <source src="./static/videos/place.mp4" type="video/mp4">
               </video>
             </div>
             <div class="item item-steve">
               <video poster="" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/full.mov" type="video/mp4">
+                <source src="./static/videos/full.mp4" type="video/mp4">
               </video>
             </div>
           </div>
@@ -117,36 +115,38 @@
   </section>
 
 
-
-
   <div class="container">
-
-
     <div class="container is-max-desktop">
-
       <div class="column has-text-centered">
-        <p class="title is-3">Real-World Demonstration<br><span class="title is-5">(All videos are 1x speed)</span></p>
+        <p class="title is-3">Real-World Demonstration<br><span class="title is-5">(All robot videos are 1x
+            speed)</span></p>
         <p class="subtitle has-text-justified" style="font-size: 14px; padding-top:1%">
-          Below are some realworld examples of LIMP generating task and motion plans to solve object goal navigation and mobile manipulation instructions with complex spatiotemporal constraints.
+          Below are additional real world examples of LIMP generating task and motion plans to solve expressive
+          instructions with complex spatiotemporal constraints.
+          Each demonstration has two videos, the top video visualizes instruction translation, referent grounding,
+          task progression semantic maps and computed motion plans for each example. The bottom video
+          shows a robot executing the generated plan in the real world. Please see our paper for more details on our
+          approach.
         </p>
       </div>
     </div>
+    <br>
 
     <!-- #### Carousel result presentation-->
     <!-- <div id="results-carousel" class="carousel results-carousel">
       <div class="item item-1">
         <video poster="" controls muted loop playsinline height="100%">
-          <source src="./static/videos/nav.mov" type="video/mp4">
+          <source src="./static/videos/demo1_info.mov" type="video/mp4">
         </video>
       </div>
       <div class="item item-steve">
         <video poster="" autoplay controls muted loop playsinline height="100%">
-          <source src="./static/videos/pick.mov" type="video/mp4">
+          <source src="./static/videos/demo2_info.mov" type="video/mp4">
         </video>
       </div>
       <div class="item item-2">
         <video poster="" autoplay controls muted loop playsinline height="100%">
-          <source src="./static/videos/place.mov" type="video/mp4">
+          <source src="./static/videos/demo3_info.mov" type="video/mp4">
         </video>
       </div>
       <div class="item item-3">
@@ -155,73 +155,88 @@
     <div id="results-carousel" class="carousel results-carousel">
       <div class="item item-1">
         <video poster="" controls muted loop playsinline height="100%">
-          <source src="./static/videos/nav.mov" type="video/mp4">
+          <source src="./static/videos/demo1.mp4" type="video/mp4">
         </video>
       </div>
       <div class="item item-2">
         <video poster="" controls muted loop playsinline height="100%">
-          <source src="./static/videos/pick.mov" type="video/mp4">
+          <source src="./static/videos/demo2.mp4" type="video/mp4">
         </video>
       </div>
       <div class="item item-3">
         <video poster="" controls muted loop playsinline height="100%">
-          <source src="./static/videos/place.mov" type="video/mp4">
+          <source src="./static/videos/demo3.mp4" type="video/mp4">
         </video>
       </div>
       <div class="item item-steve">
       </div>
-    </div> -->
-  
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <div class="content">
-            <h3 class="title is-5">Demo 1</h3>
+    </div>-->
 
-            <video id="replay-video" controls muted preload loop playsinline width="100%">
-              <source src="./static/videos/demo1_info.mov" type="video/mp4">
-            </video>
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <div class="content">
+          <h3 class="title is-5">Demo 1</h3>
+          <!-- <video id="replay-video" controls muted preload loop playsinline width="100%">
+            <source src="./static/videos/demo1_info.mp4" type="video/mp4">
+          </video> -->
+          <div class="publication-video">
+            <iframe src="https://drive.google.com/file/d/1QLxN8P_aOznVyFZtBmpuHv5XCj2-kghS/preview" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
-          <div class="content has-text-centered">
+        </div>
+        <div class="content has-text-centered">
+          <div class="publication-video">
             <video id="replay-video" controls muted preload loop playsinline width="100%">
               <source src="./static/videos/demo1.mp4" type="video/mp4">
             </video>
           </div>
         </div>
+      </div>
 
-        <div class="column has-text-centered">
-          <div class="content">
-            <h3 class="title is-5">Demo 1</h3>
 
-            <video id="replay-video" controls muted preload loop playsinline width="100%">
-              <source src="./static/videos/demo1_info.mov" type="video/mp4">
-            </video>
+      <div class="column has-text-centered">
+        <div class="content">
+          <h3 class="title is-5">Demo 2</h3>
+          <!-- <video id="replay-video" controls muted preload loop playsinline width="100%">
+            <source src="./static/videos/demo2_info.mp4" type="video/mp4">
+          </video> -->
+          <div class="publication-video">
+            <iframe src="https://drive.google.com/file/d/1nsySPHRg1qYTNoJ4IqEJTbxndqa4T5By/preview" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
-          <div class="content has-text-centered">
+        </div>
+        <div class="content has-text-centered">
+          <div class="publication-video">
             <video id="replay-video" controls muted preload loop playsinline width="100%">
-              <source src="./static/videos/demo1.mp4" type="video/mp4">
+              <source src="./static/videos/demo2.mp4" type="video/mp4">
             </video>
           </div>
         </div>
+      </div>
 
-        <div class="column has-text-centered">
-          <div class="content">
-            <h3 class="title is-5">Demo 1</h3>
-
-            <video id="replay-video" controls muted preload loop playsinline width="100%">
-              <source src="./static/videos/demo1_info.mov" type="video/mp4">
-            </video>
+      <div class="column has-text-centered">
+        <div class="content">
+          <h3 class="title is-5">Demo 3</h3>
+          <!-- <video id="replay-video" controls muted preload loop playsinline width="100%">
+            <source src="./static/videos/demo3_info.mp4" type="video/mp4">
+          </video> -->
+          <div class="publication-video">
+            <iframe src="https://drive.google.com/file/d/1Pn81r4SPOu2V4_DBoIEhSg6G34iEUGds/preview" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
-          <div class="content has-text-centered">
+        </div>
+        <div class="content has-text-centered">
+          <div class="publication-video">
             <video id="replay-video" controls muted preload loop playsinline width="100%">
-              <source src="./static/videos/demo1.mp4" type="video/mp4">
+              <source src="./static/videos/demo3.mp4" type="video/mp4">
             </video>
           </div>
         </div>
-  
+      </div>
+    </div>
 
-  </div>
-  <br>
-  <br>
+    <br>
+    <br>
 </body>
 
 </html>
