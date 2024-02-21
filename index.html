@@ -132,12 +132,12 @@
         </div>
         <h2 class="subtitle has-text-justified" style="font-size: 14px; padding-top: 1%;">
           <!-- Language Instruction grounding for Motion Planning (LIMP) executing the instruction.  -->
-          Language Instruction grounding for Motion Planning (LIMP) executing the instruction "<span
+          This figure visualizes our approach, Language Instruction grounding for Motion Planning (LIMP), executing the instruction: "<span
             style="font-style: italic;">Bring the green plush toy to the whiteboard in front of it, watch out for the
             robot in front of the toy</span>".
-          LIMP grounds instruction referents and generates a plan that enables the robot to navigate from its start
-          location (yellow, A), to the green plush toy (green, B), execute a pick skill which searches for and grasps
-          the object, then navigate to the whiteboard (blue, C), and execute a place skill which sets the object down.
+          LIMP has no semantic information of the environment prior to this instruction, rather at runtime, our approach leverages VLMs and spatial reasoning to detect and ground open-vocabulary instruction referents. LIMP then generate a verifiably correct task and motion plan that enables the robot to navigate from its start
+          location  <span style="color: goldenrod;">(yellow, A)</span>, to the green plush toy <span style="color: green;">(green, B)</span>, execute a pick skill which searches for and grasps
+          the object, then navigate to the whiteboard <span style="color: blue;">(blue, C)</span> while avoiding the robot in the space <span style="color: red;">(red circles)</span>, to finally execute a place skill which sets the object down.
         </h2>
       </div>
 
