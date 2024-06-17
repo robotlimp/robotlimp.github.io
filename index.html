@@ -237,14 +237,21 @@
         <p class="title is-3">Baseline Comparison<br><span class="title is-5">(All robot videos are 1x
             speed)</span></p>
         <p class="subtitle has-text-justified" style="font-size: 14px; padding-top:1%">
-          We compare LIMP with baseline implementations of an LLM planner (NLmap-Saycan) and an LLM code-writing planner (Code-as-policies), representing
+          We compare LIMP with baseline implementations of an LLM planner (NLmap-Saycan) and an LLM code-writing planner
+          (Code-as-policies), representing
           state-of-the-art approaches for language-conditioned robot instruction following. To ensure competitive
-          performance, we integrate our spatial grounding module and low-level robot control into these baselines, allowing them to query our module for 3D object positions, execute
-          manipulation options, and use our path planner. We observe that LLM and code-writing planners are quite adept at generating
-          sequential subgoals, but struggle with temporal constraint adherence. In contrast, our approach ensures each robot step adheres to constraints while achieving subgoals, as illustrated in the example below. 
+          performance, we integrate our spatial grounding module and low-level robot control into these baselines,
+          allowing them to query our module for 3D object positions, execute
+          manipulation options, and use our path planner. We observe that LLM and code-writing planners are quite adept
+          at generating
+          sequential subgoals, but struggle with temporal constraint adherence. In contrast, our approach ensures each
+          robot step adheres to constraints while achieving subgoals, as illustrated in the example below.
         </p>
 
-        <p><span style="font-size: 14px; font-weight: bold; text-decoration: underline;">Instruction</span><br><span>"Hey, I want you to bring the plush toy on the table to the tree, </span> <span style="color: red;">make sure to avoid the trash bin when bringing the toy"</span></p>
+        <p><span
+            style="font-size: 14px; font-weight: bold; text-decoration: underline;">Instruction</span><br><span>"Hey, I
+            want you to bring the plush toy on the table to the tree, </span> <span style="color: red;">make sure to
+            avoid the trash bin when bringing the toy"</span></p>
         <br>
       </div>
     </div>
@@ -287,22 +294,8 @@
     </div>
   </div>
 
-
-
   <br>
   <br>
-
-  <script>
-    function loadVideo() {
-      var videoSelector = document.getElementById('videoSelector');
-      var videoPlayer = document.getElementById('videoPlayer');
-      var videoSource = document.getElementById('videoSource');
-
-      var selectedVideo = videoSelector.value;
-      videoSource.src = selectedVideo;
-      videoPlayer.load();
-    }
-  </script>
 </body>
 
 </html>
