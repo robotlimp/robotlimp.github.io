@@ -68,7 +68,7 @@
         </div>
   </section>
 
-<!-- 
+  <!-- 
   <section class="section" style="margin-top: -5%">
     <div class="container is-max-desktop">
       <div class="hero-body">
@@ -132,21 +132,23 @@
         </div>
         <h2 class="subtitle has-text-justified" style="font-size: 14px; padding-top: 1%;">
           <!-- Language Instruction grounding for Motion Planning (LIMP) executing the instruction.  -->
-          This figure visualizes our approach, Language Instruction grounding for Motion Planning (LIMP), executing the instruction: "<span
-            style="font-style: italic;">Bring the green plush toy to the whiteboard in front of it, watch out for the
+          This figure visualizes our approach, Language Instruction grounding for Motion Planning (LIMP), executing the
+          instruction: "<span style="font-style: italic;">Bring the green plush toy to the whiteboard in front of it,
+            watch out for the
             robot in front of the toy</span>".
-          LIMP has no semantic information of the environment prior to this instruction, rather at runtime, our approach leverages VLMs and spatial reasoning to detect and ground open-vocabulary instruction referents. LIMP then generates a verifiably correct task and motion plan that enables the robot to navigate from its start
-          location  <span style="color: goldenrod;">(yellow, A)</span>, to the green plush toy <span style="color: green;">(green, B)</span>, execute a pick skill which searches for and grasps
-          the object, then navigate to the whiteboard <span style="color: blue;">(blue, C)</span> while avoiding the robot in the space <span style="color: red;">(red circles)</span>, to finally execute a place skill which sets the object down.
+          LIMP has no semantic information of the environment prior to this instruction, rather at runtime, our approach
+          leverages VLMs and spatial reasoning to detect and ground open-vocabulary instruction referents. LIMP then
+          generates a verifiably correct task and motion plan that enables the robot to navigate from its start
+          location <span style="color: goldenrod;">(yellow, A)</span>, to the green plush toy <span
+            style="color: green;">(green, B)</span>, execute a pick skill which searches for and grasps
+          the object, then navigate to the whiteboard <span style="color: blue;">(blue, C)</span> while avoiding the
+          robot in the space <span style="color: red;">(red circles)</span>, to finally execute a place skill which sets
+          the object down.
         </h2>
       </div>
 
     </div>
   </section>
-
-
-
-
 
   <div class="container">
     <div class="container is-max-desktop">
@@ -227,9 +229,80 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <br>
-    <br>
+  <div class="container" style="padding-top: 3%;">
+    <div class="container is-max-desktop">
+      <div class="column has-text-centered">
+        <p class="title is-3">Baseline Comparison<br><span class="title is-5">(All robot videos are 1x
+            speed)</span></p>
+        <p class="subtitle has-text-justified" style="font-size: 14px; padding-top:1%">
+          We compare LIMP with baseline implementations of an LLM planner (NLmap-Saycan) and an LLM code-writing planner (Code-as-policies), representing
+          state-of-the-art approaches for language-conditioned robot instruction following. To ensure competitive
+          performance, we integrate our spatial grounding module and low-level robot control into these baselines, allowing them to query our module for 3D object positions, execute
+          manipulation options, and use our path planner. We observe that LLM and code-writing planners are quite adept at generating
+          sequential subgoals, but struggle with temporal constraint adherence. In contrast, our approach ensures each robot step adheres to constraints while achieving subgoals, as illustrated in the example below. 
+        </p>
+
+        <p><span style="font-size: 14px; font-weight: bold; text-decoration: underline;">Instruction</span><br><span>"Hey, I want you to bring the plush toy on the table to the tree, </span> <span style="color: red;">make sure to avoid the trash bin when bringing the toy"</span></p>
+        <br>
+      </div>
+    </div>
+
+
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <h3 class="title is-5">LIMP (Ours)</h3>
+        <div class="content has-text-centered">
+          <div class="publication-video">
+            <video id="replay-video" controls muted preload loop playsinline width="100%">
+              <source src="./static/videos/baselines/toy_tree_limp_planner.mov" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column has-text-centered">
+        <div class="content has-text-centered">
+          <h3 class="title is-5">NLMap-Saycan</h3>
+          <div class="publication-video">
+            <video id="replay-video" controls muted preload loop playsinline width="100%">
+              <source src="./static/videos/baselines/toy_tree_LLM_Planner.mov" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content has-text-centered">
+          <h3 class="title is-5">Code-as-policies</h3>
+          <div class="publication-video">
+            <video id="replay-video" controls muted preload loop playsinline width="100%">
+              <source src="./static/videos/baselines/toy_tree_codegen_planner.mov" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <br>
+  <br>
+
+  <script>
+    function loadVideo() {
+      var videoSelector = document.getElementById('videoSelector');
+      var videoPlayer = document.getElementById('videoPlayer');
+      var videoSource = document.getElementById('videoSource');
+
+      var selectedVideo = videoSelector.value;
+      videoSource.src = selectedVideo;
+      videoPlayer.load();
+    }
+  </script>
 </body>
 
 </html>
