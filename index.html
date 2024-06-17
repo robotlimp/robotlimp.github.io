@@ -263,7 +263,7 @@
         <div class="content has-text-centered">
           <div class="publication-video">
             <video id="replay-video" controls muted preload loop playsinline width="100%">
-              <source src="./static/videos/baselines/toy_tree_limp_planner.mov" type="video/mp4">
+              <source src="./static/videos/baselines/toy_tree_limp_planner.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -275,7 +275,7 @@
           <h3 class="title is-5">NLMap-Saycan</h3>
           <div class="publication-video">
             <video id="replay-video" controls muted preload loop playsinline width="100%">
-              <source src="./static/videos/baselines/toy_tree_LLM_Planner.mov" type="video/mp4">
+              <source src="./static/videos/baselines/toy_tree_LLM_Planner.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -286,7 +286,7 @@
           <h3 class="title is-5">Code-as-policies</h3>
           <div class="publication-video">
             <video id="replay-video" controls muted preload loop playsinline width="100%">
-              <source src="./static/videos/baselines/toy_tree_codegen_planner.mov" type="video/mp4">
+              <source src="./static/videos/baselines/toy_tree_codegen_planner.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -294,8 +294,48 @@
     </div>
   </div>
 
+  <div class="container" style="padding-top: 3%;">
+    <div class="container is-max-desktop">
+      <div class="column has-text-centered">
+        <p class="title is-3">More Demonstration Videos</p>
+        <p class="subtitle has-text-justified" style="font-size: 14px; padding-top:1%">
+          We run a comprehensive evaluation on 150 natural language instructions in multiple real world environments. See below for some additional instruction following videos.
+        </p>
+        <select id="videoSelector" onchange="loadVideo()">
+          <!-- <option value="" disabled selected>Select a video</option> -->
+          <option value="./static/videos/extra_demos/toy_poster_seat.mp4" >I am sitting on the brown sofa under the painting get me the plush toy on the table</option>
+          <option value="./static/videos/extra_demos/book_printer.mp4" >Bring the red book to the small printer on the right side of the big one</option>
+          <option value="./static/videos/extra_demos/coke_to_crate.mp4">Help me pack the coke into the black crate</option>
+          <option value="./static/videos/extra_demos/microwave_sink.mp4">I want to wash the red bottle in the sink, i think i left it in the microwave bring it</option>
+          <option value="./static/videos/extra_demos/redbottle_computer.mp4">Go get the red bottle and bring it to the computer close to the green trash bin</option>
+        </select>
+
+        <!-- Video player -->
+        <div id="videoContainer" style="margin-top: 20px;">
+          <video id="videoPlayer" autoplay controls muted preload loop playsinline width="100%" style="border-radius: 15px;">
+            <source id="videoSource"  src="./static/videos/extra_demos/toy_poster_seat.mp4"  type="video/mp4">
+          </video>
+      </div>
+    </div>
+  
+  </div>
+  </div>
+
+
   <br>
   <br>
 </body>
+
+<script>
+  function loadVideo() {
+    var videoSelector = document.getElementById('videoSelector');
+    var videoPlayer = document.getElementById('videoPlayer');
+    var videoSource = document.getElementById('videoSource');
+
+    var selectedVideo = videoSelector.value;
+    videoSource.src = selectedVideo;
+    videoPlayer.load();
+  }
+</script>
 
 </html>
