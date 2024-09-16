@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="description" content="Verifiably Following Complex Robot Instructions with Foundation Models.">
-  <meta name="keywords"  content="Limp, robotlimp, foundation models, robot instruction following, visual language models, motion planning, task and motion planning">
+  <meta name="keywords"
+    content="Limp, robotlimp, foundation models, robot instruction following, visual language models, motion planning, task and motion planning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Verifiably Following Complex Robot Instructions with Foundation Models</title>
 
@@ -53,45 +54,46 @@
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">Verifiably Following Complex Robot Instructions with Foundation
               Models</h1>
-            <div class="is-size-5 publication-authors">
+            <div class="is-size-4 publication-authors">
               <span class="author-block">
-                <!-- Author Names Omitted for Anonymous Review -->
-                Supplementary Videos and Demonstrations
+                <a href="https://benedictquartey.github.io/">Benedict Quartey*</a>,</span>
+              <span class="author-block">
+                <a href="https://eric-rosen.github.io/">Eric Rosen*</a>,</span>
+              <span class="author-block">
+                <a href="https://cs.brown.edu/people/stellex/">Stefanie Tellex</a>,
               </span>
               <span class="author-block">
+                <a href="https://cs.brown.edu/people/gdk/">George Konidaris</a>
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Brown University</span>
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="static/assets/supplementary.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <svg class="svg-inline--fa fa-file-image fa-w-12" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="file-image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M384 121.941V128H256V0h6.059a24 24 0 0 1 16.97 7.029l97.941 97.941a24.002 24.002 0 0 1 7.03 16.971zM248 160c-13.2 0-24-10.8-24-24V0H24C10.745 0 0 10.745 0 24v464c0 13.255 10.745 24 24 24h336c13.255 0 24-10.745 24-24V160H248zm-135.455 16c26.51 0 48 21.49 48 48s-21.49 48-48 48-48-21.49-48-48 21.491-48 48-48zm208 240h-256l.485-48.485L104.545 328c4.686-4.686 11.799-4.201 16.485.485L160.545 368 264.06 264.485c4.686-4.686 12.284-4.686 16.971 0L320.545 304v112z"></path></svg>
+                    </span>
+                    <span>Supplementary Materials</span>
+                  </a>
+                </span>
+
+              </div>
             </div>
           </div>
-        </div>
   </section>
 
-  <!-- 
-  <section class="section" style="margin-top: -5%">
+  <!-- <section class="section" style="margin-top: -5%">
     <div class="container is-max-desktop">
       <div class="hero-body">
         <div class="columns is-centered has-text-centered">
           <h2 class="title is-3">Abstract</h2>
         </div>
         <p class="subtitle has-text-justified" style="font-size: 14px; padding-top: 1%;">
-          Enabling robots to follow complex natural language instructions is an important yet challenging problem.
-          People want to flexibly express constraints, refer to arbitrary landmarks and verify behavior when instructing
-          robots.
-          Conversely, robots must disambiguate human instructions into specifications and ground instruction referents
-          in the real world.
-          We propose Language Instruction grounding for Motion Planning (LIMP), a system that leverages foundation
-          models and temporal logics
-          to generate instruction-conditioned semantic maps that enable robots to verifiably follow expressive and
-          long-horizon instructions
-          with open vocabulary referents and complex spatiotemporal constraints. In contrast to prior methods for using
-          foundation models in robot
-          task execution, LIMP constructs an explainable instruction representation that reveals the robot's alignment
-          with an instructor's intended motives
-          and affords the synthesis of robot behaviors that are correct-by-construction. We demonstrate LIMP in three
-          real-world environments,
-          across a set of 35 complex spatiotemporal instructions, showing the generality of our approach and the ease of
-          deployment in novel
-          unstructured domains. In our experiments, LIMP can spatially ground open-vocabulary referents and synthesize
-          constraint-satisfying
-          plans in 90% of object-goal navigation and 71% of mobile manipulation instructions.
+          Enabling mobile robots to follow complex natural language instructions is a challenging problem. When instructing robots, users want to flexibly express constraints, refer to arbitrary landmarks, and verify robot behavior, while robots must disambiguate instructions into specifications and ground instruction referents in the real world. We introduce Language Instruction grounding for Motion Planning (LIMP), an approach that enables robots to verifiably follow complex, open-ended instructions in real-world environments without prebuilt semantic maps. LIMP constructs a symbolic instruction representation that reveals the robot's alignment with an instructor's intended motives and affords the synthesis of robot behaviors that are correct-by-construction. We conduct a large-scale evaluation of LIMP on 150 instructions across five real-world environments, demonstrating its versatility and ease of deployment in diverse, unstructured domains. LIMP performs comparably to state-of-the-art baselines on standard open-vocabulary tasks and additionally achieves a 79\% success rate on complex spatiotemporal instructions, significantly outperforming baselines, which only reach 38\%.
         </p>
       </div>
     </div>
@@ -233,9 +235,11 @@
         <p class="title is-3">Baseline Comparison<br><span class="title is-5">(All robot videos are 1x
             speed)</span></p>
         <p class="subtitle has-text-justified" style="font-size: 14px; padding-top:1%">
-          We compare LIMP with baseline implementations of an LLM planner (NLmap-Saycan) and an LLM code-writing planner
+          We compare LIMP with baseline implementations of an LLM task planner (NLmap-Saycan) and an LLM code-writing
+          planner
           (Code-as-policies), representing
-          state-of-the-art approaches for language-conditioned robot instruction following. To ensure competitive
+          state-of-the-art approaches for open-ended language-conditioned robot instruction following. To ensure
+          competitive
           performance, we integrate our spatial grounding module and low-level robot control into these baselines,
           allowing them to query our module for 3D object positions, execute
           manipulation options, and use our path planner. We observe that LLM and code-writing planners are quite adept
@@ -295,31 +299,56 @@
       <div class="column has-text-centered">
         <p class="title is-3">More Demonstration Videos</p>
         <p class="subtitle has-text-justified" style="font-size: 14px; padding-top:1%">
-          We run a comprehensive evaluation on 150 natural language instructions in multiple real world environments. See below for some additional instruction following videos.
+          We run a comprehensive evaluation on 150 natural language instructions in multiple real world environments.
+          See below for some additional instruction following videos.
         </p>
         <select id="videoSelector" onchange="loadVideo()">
           <!-- <option value="" disabled selected>Select a video</option> -->
-          <option value="./static/videos/extra_demos/toy_poster_seat.mp4" >I am sitting on the brown sofa under the painting get me the plush toy on the table</option>
-          <option value="./static/videos/extra_demos/book_printer.mp4" >Bring the red book to the small printer on the right side of the big one</option>
-          <option value="./static/videos/extra_demos/coke_to_crate.mp4">Help me pack the coke into the black crate</option>
-          <option value="./static/videos/extra_demos/microwave_sink.mp4">I want to wash the red bottle in the sink, i think i left it in the microwave bring it</option>
-          <option value="./static/videos/extra_demos/redbottle_computer.mp4">Go get the red bottle and bring it to the computer close to the green trash bin</option>
+          <option value="./static/videos/extra_demos/toy_poster_seat.mp4">I am sitting on the brown sofa under the
+            painting get me the plush toy on the table</option>
+          <option value="./static/videos/extra_demos/book_printer.mp4">Bring the red book to the small printer on the
+            right side of the big one</option>
+          <option value="./static/videos/extra_demos/coke_to_crate.mp4">Help me pack the coke into the black crate
+          </option>
+          <option value="./static/videos/extra_demos/microwave_sink.mp4">I want to wash the red bottle in the sink, i
+            think i left it in the microwave bring it</option>
+          <option value="./static/videos/extra_demos/redbottle_computer.mp4">Go get the red bottle and bring it to the
+            computer close to the green trash bin</option>
         </select>
 
         <!-- Video player -->
         <div id="videoContainer" style="margin-top: 20px;">
-          <video id="videoPlayer" autoplay controls muted preload loop playsinline width="100%" style="border-radius: 15px;">
-            <source id="videoSource"  src="./static/videos/extra_demos/toy_poster_seat.mp4"  type="video/mp4">
+          <video id="videoPlayer" autoplay controls muted preload loop playsinline width="100%"
+            style="border-radius: 15px;">
+            <source id="videoSource" src="./static/videos/extra_demos/toy_poster_seat.mp4" type="video/mp4">
           </video>
+        </div>
       </div>
+
     </div>
-  
-  </div>
   </div>
 
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="column has-text-centered">
+        <h2 class="title">BibTeX</h2>
+      </div>
+      <pre><code>
+        @article{quartey2024verifiably,
+          title={Verifiably Following Complex Robot Instructions with Foundation Models},
+          author={Quartey, Benedict and Rosen, Eric and Tellex, Stefanie and Konidaris, George},
+          journal={arXiv preprint arXiv:2402.11498},
+          year={2024}
+        }</code></pre>
+    </div>
+    <div class="container is-max-desktop">
+    <p> Special thanks to <a href="https://nerfies.github.io/">Nerfies</a> for an awesome website template!</p>
+    </div>
+  </section> -->
 
   <br>
   <br>
+
 </body>
 
 <script>
